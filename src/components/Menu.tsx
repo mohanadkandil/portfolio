@@ -8,7 +8,7 @@ const links = [
 ];
 export const Menu = () => {
   return (
-    <div className="my-12 rounded-[36px] border-2 border-[#2C2C2E] px-8 py-3">
+    <div className="my-12 flex gap-10 rounded-[36px] border-2 border-[#2C2C2E] px-8 py-3">
       {links.map((link) => (
         <MenuLink link={link} key={link.label} />
       ))}

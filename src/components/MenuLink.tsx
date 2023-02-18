@@ -4,19 +4,21 @@ import { usePathname } from "next/navigation";
 
 export const MenuLink = ({ link }) => {
   const pathname = usePathname();
-  console.log("🚀 ~ file: MenuLink.tsx:7 ~ MenuLink ~ pathname", pathname);
   let isActive = false;
 
-  if (pathname === link) {
+  if (pathname === link.link) {
     isActive = true;
   }
 
   return (
-    <Link href={link.link} className="bg-blue-500">
+    <Link href={link.link}>
       <button
-        className={classNames("", isActive ? "bg-green-400" : "bg-white")}
+        className={classNames(
+          "text-white",
+          isActive ? "rounded-[36px] bg-[#2CB67D]" : ""
+        )}
       >
-        test
+        <span className="px-2">{link.label}</span>
       </button>
     </Link>
   );
