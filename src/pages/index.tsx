@@ -1,8 +1,23 @@
 import { Card, Header } from "@/components";
-import { LinkedIn, Github, Email } from "@/icons";
+import {
+  LinkedIn,
+  Github,
+  Email,
+  Javascript,
+  ReactIcon,
+  NextJS,
+  TailwindIcon,
+  NodeJS,
+  Postgres,
+  Redux,
+  Arrow,
+} from "@/icons";
+import { Prisma } from "@/icons/prisma";
+import { Typescript } from "@/icons/typescript";
 import { type NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import profilePic from "../assets/profile.png";
 
 const Home: NextPage = () => {
@@ -26,21 +41,77 @@ const Home: NextPage = () => {
             </p>
           </Card>
           <Card className="flex items-center justify-center">
-            <LinkedIn />
-            <div className=""></div>
+            <div>
+              <ul className="flex flex-wrap items-center justify-center gap-4">
+                <li className="text-center">
+                  <Javascript className="mx-auto h-10 w-10" />
+                  <p className="text-sm text-[#fffffe]">Javascript</p>
+                </li>
+                <li className="text-center">
+                  <Typescript className="mx-auto h-10 w-10" />
+                  <p className="text-sm text-[#fffffe]">TypeScript</p>
+                </li>
+                <li className="text-center">
+                  <ReactIcon className="mx-auto h-10 w-10" />
+                  <p className="text-sm text-[#fffffe]">React</p>
+                </li>
+                <li className="text-center">
+                  <Redux className="mx-auto h-10 w-10" />
+                  <p className="text-sm text-[#fffffe]">Redux</p>
+                </li>
+                <li className="text-center">
+                  <NextJS className="mx-auto h-10 w-10 text-white" />
+                  <p className="text-sm text-[#fffffe]">Next JS</p>
+                </li>
+                <li className="text-center">
+                  <TailwindIcon className="mx-auto h-10 w-10 text-white" />
+                  <p className="text-sm text-[#fffffe]">Tailwind CSS</p>
+                </li>
+                <li className="text-center">
+                  <Prisma className="mx-auto h-10 w-10 text-white" />
+                  <p className="text-sm text-[#fffffe]">Prisma</p>
+                </li>
+                <li className="text-center">
+                  <NodeJS className="mx-auto h-10 w-10 text-white" />
+                  <p className="text-sm text-[#fffffe]">Node JS</p>
+                </li>
+                <li className="text-center">
+                  <Postgres className="mx-auto h-10 w-10 text-white" />
+                  <p className="text-sm text-[#fffffe]">PostgreSQL</p>
+                </li>
+              </ul>
+            </div>
           </Card>
           <Card
             type="vertical"
             className="col-start-4 col-end-5 row-span-2"
           ></Card>
-          <Card className="flex items-center justify-center">
+          <Card
+            className="relative flex items-center justify-center"
+            color="github"
+          >
             <Github />
+            <Link
+              href=""
+              className="absolute bottom-5 left-9 rounded-full bg-black/30 p-1.5"
+            >
+              <Arrow className="h-5 w-5" />
+            </Link>
+          </Card>
+          <Card
+            className="relative flex items-center justify-center"
+            color="linkedin"
+          >
+            <LinkedIn className="h-24 w-24 text-white" />
+            <Link
+              href=""
+              className="absolute bottom-5 left-9 rounded-full bg-black/30 p-1.5"
+            >
+              <Arrow className="h-5 w-5" />
+            </Link>
           </Card>
           <Card className="flex items-center justify-center">
-            <LinkedIn />
-          </Card>
-          <Card className="flex items-center justify-center">
-            <LinkedIn />
+            <span className="text-2xl">Resume</span>
           </Card>
           <Card type="horizontal" className="col-span-2">
             <p className="text-lg font-semibold">Let’s connect</p>
