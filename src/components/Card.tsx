@@ -2,7 +2,7 @@ import { Arrow } from "@/icons";
 import { classNames } from "@/utils";
 
 const styles = {
-  base: "p-9 bg-[#2C2C2E] rounded-[36px] text-base font-semibold text-[#fffffe]",
+  base: "p-9 rounded-[36px] text-base font-semibold text-[#fffffe]",
   container: "space-y-4",
   link: {
     container: "relative bottom-0 w-full h-full",
@@ -15,6 +15,12 @@ const styles = {
     horizontal: "w-[576px] h-[280px]",
     vertical: "w-[280px] h-[590px]",
   },
+  color: {
+    primary: "bg-[#2C2C2E]",
+    secondary: "bg-[#16161A]",
+    linkedin: "bg-[#5285ce]",
+    github: "bg-[#1d1d1d]",
+  },
 };
 
 type Props = {
@@ -22,6 +28,7 @@ type Props = {
   children: React.ReactNode;
   link?: boolean;
   className?: string;
+  color?: keyof typeof styles.color;
 };
 
 const RedirectionLink = () => {
@@ -40,6 +47,7 @@ export const Card = (props: Props) => {
       className={classNames(
         styles.base,
         styles.type[props.type || "squared"],
+        styles.color[props.color || "primary"],
         props.className
       )}
     >
